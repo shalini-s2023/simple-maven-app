@@ -1,1 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>SimpleAddApp</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
+
+
+
+git init
+git add .
+git commit -m "Initial Maven Project"
+git branch -M main
+git remote add origin <your-repo-url>
+git push -u origin main
+
+
+package com.example;
+
+public class App {
+    public int add(int a, int b) {
+        return a + b;
+    }
+}
+
+
+
+
+
+package com.example;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class AppTest {
+
+    @Test
+    void testAdd() {
+        App app = new App();
+        assertEquals(5, app.add(2,3));
+    }
+}
